@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(135deg, rgb(168, 206, 211), rgb(4, 56, 71)); */
+  background: linear-gradient(210deg, rgb(110, 187, 218), rgb(5, 67, 124));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(100px);
+  padding: 25px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+h1 {
+  /* margin-bottom: 20px; */
+  text-align: center;
+  font-size: 60px;
+}

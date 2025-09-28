@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #74ebd5, #9face6, #fbc2eb, #a6c1ee);
+  /* background: linear-gradient(45deg, #000000, #3c3c3d, #706f6f, #888787); */
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating circles */
+.orb {
+  filter: blur(5px);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 3px 5px 0px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(100px);
+  opacity: 0.25;
+  background: white;
+  animation: float 20s ease infinite;
+}
+
+.orb:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 15%;
+  animation-duration: 15s;
+}
+.orb:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  bottom: 15%;
+  right: 10%;
+  animation-duration: 35s;
+}
+.orb:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  left: 30%;
+  animation-duration: 20s;
+}
+.orb:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 5%;
+  animation-duration: 40s;
+}
+.orb:nth-child(5) {
+  width: 300px;
+  height: 300px;
+  bottom: 2%;
+  left: 52%;
+  animation-duration: 10s;
+}
+.orb:nth-child(6) {
+  width: 200px;
+  height: 200px;
+  top: 6%;
+  left: 60%;
+  animation-duration: 30s;
+}
+.orb:nth-child(7) {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 60%;
+  animation-duration: 13s;
+}
+.orb:nth-child(8) {
+  width: 100px;
+  height: 100px;
+  top: 16%;
+  left: 80%;
+  animation-duration: 10s;
+}
+.orb:nth-child(9) {
+  width: 100px;
+  height: 100px;
+  top: 5%;
+  left: 20%;
+  animation-duration: 50s;
+}
+.orb:nth-child(9) {
+  width: 40px;
+  height: 40px;
+  top: 25%;
+  left: 20%;
+  animation-duration: 11s;
+}
+.orb:nth-child(10) {
+  width: 430px;
+  height: 430px;
+  top: 80%;
+  left: -10%;
+  animation-duration: 3s;
+}
+.orb:nth-child(11) {
+  width: 400px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  animation-duration: 25s;
+}
+
+.orb:nth-child(12) {
+  width: 100px;
+  height: 10px;
+  top: 100%;
+  left: 100%;
+  animation-duration: 50s;
+}
+
+.orb:nth-child(13) {
+  width: --200px;
+  height: 100px;
+  top: 5%;
+  left: 20%;
+  animation-duration: 50s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    filter: opacity(0.3);
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+    filter: opacity(1);
+  }
+  60% {
+    transform: translateY(-2px);
+    filter: opacity(0.5);
+  }
+  90% {
+    transform: translateY(-40px) translateX(20px);
+    filter: opacity(1);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    filter: opacity(0.3);
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.158);
+  border-radius: 1rem;
+  backdrop-filter: blur(100px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(6px);
+  z-index: 1; /* keep above orbs */
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: rgb(71, 71, 71);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* social links */
+.social-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-flow: wrap;
+}
+
+.social-link-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 3.5rem;
+  aspect-ratio: 1;
+  border: 2px solid #000000;
+  border-radius: 1.05rem;
+}
+
+.social-icon {
+  fill: #000000;
+  transition: fill 0.3s ease;
+}
+.linkedin {
+  /* background: #1ea5ff; */
+  color: white;
+}
+
+.github {
+  /* background: #333; */
+  color: white;
+}
+
+.links a:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}

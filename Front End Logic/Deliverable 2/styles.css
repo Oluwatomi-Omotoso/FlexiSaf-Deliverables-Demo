@@ -1,0 +1,78 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(76, 78, 69));
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  overflow: hidden;
+}
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px -8px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #444241;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+button:hover {
+  background: wheat;
+  color: #363636;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: rgba(255, 255, 255, 0.15);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remove-btn {
+  background: #e63946;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.remove-btn:hover {
+  background: #ff4f4f;
+}
