@@ -112,7 +112,7 @@ body {
   height: 430px;
   top: 80%;
   left: -10%;
-  animation-duration: 9s;
+  animation-duration: 19s;
 }
 .orb:nth-child(11) {
   width: 400px;
@@ -234,4 +234,5 @@ p {
   transform: translateY(-3px);
   opacity: 0.9;
 }
+
 
