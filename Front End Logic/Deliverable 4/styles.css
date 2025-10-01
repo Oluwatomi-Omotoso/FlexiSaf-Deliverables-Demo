@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  color: #aaa;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filters button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+.filters button.active {
+  background: #007bff;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #222;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.card .task-list {
+  list-style: disc-inside;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.card button {
+  align-self: flex-end;
+  background: #444;
+  color: #eee;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.card button:hover {
+  background: #666;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease-in-out;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #222;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 400px;
+  max-width: 90%;
+}
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+#modal-task-list {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+#modal-task-list li {
+  margin: 0.3rem 0.1rem;
+}
+.task-list {
+  list-style: none; /* remove default bullets */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* center the text horizontally */
+}
+
+.task-list li {
+  padding: 6px 0;
+}
+
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.task-input input {
+  flex: 1;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+.task-input button {
+  background: #444;
+  color: #eee;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.task-input button:hover {
+  background: #666;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.modal-actions button {
+  background: #444;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  color: #eee;
+  cursor: pointer;
+}
+.modal-actions button:hover {
+  background: #666;
+}
+#clear-tasks {
+  background: #a33;
+}
+#clear-tasks:hover {
+  background: #c44;
+}

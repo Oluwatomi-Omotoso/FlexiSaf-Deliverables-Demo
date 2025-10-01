@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Week Planner</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Interactive Week Planner</h1>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <button data-filter="all" id="allBtn" class="active">All Days</button>
+      <button data-filter="withTasks" id="withTasksBtn">Days With Tasks</button>
+    </div>
+
+    <!-- Grid -->
+    <main class="grid">
+      <!-- Weekdays -->
+      <div class="card" data-day="Monday">
+        <h2>Monday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Tuesday">
+        <h2>Tuesday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Wednesday">
+        <h2>Wednesday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Thursday">
+        <h2>Thursday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Friday">
+        <h2>Friday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Saturday">
+        <h2>Saturday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+
+      <div class="card" data-day="Sunday">
+        <h2>Sunday</h2>
+        <ul class="task-list"></ul>
+        <button class="edit-btn">Edit</button>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <h2 id="modal-day">Edit Tasks</h2>
+        <ul id="modal-task-list"></ul>
+        <div class="task-input">
+          <input type="text" id="new-task" placeholder="New task..." />
+          <button id="add-task">Add</button>
+        </div>
+        <div class="modal-actions">
+          <button id="save-tasks">Save</button>
+          <button id="close-modal">Close</button>
+          <button id="clear-tasks">Clear all</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
